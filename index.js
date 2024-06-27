@@ -38,6 +38,7 @@ function newElement() {
   var inputValue = document.getElementById("taskInput").value;
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
+  li.className = "button column is-four-fifths";
   if (inputValue === '') {
     alert("You must write something!");
   } else {
@@ -49,7 +50,7 @@ function newElement() {
   
     var span = document.createElement("SPAN");
     var txt = document.createTextNode("\u00D7");
-    span.className = "close";
+    span.className = "column button is-danger";
     span.appendChild(txt);
     li.appendChild(span);
   
